@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>  
+<project name="apssdc" default="war" basedir=".">
+	<description>Application build file</description>
+	<target name="war">
+		<mkdir dir="warfile" />
+		<war destfile="warfile/orga.war" webxml="web/WEB-INF/web.xml">
+			<fileset dir="web" />    
+			<classes dir="web/WEB-INF/classes" />     
+		</war>              
+
+		<copy todir="E:\softwares\apache-tomcat-7.0.85\webapps" flatten="true">
+			<resources>
+				<file file="warfile/orga.war" />
+			</resources>            
+		</copy>                         
+	</target>    
+                        
+	<target name="clean" description="clean up">
+		<delete dir="${dist}" />
+	</target>                                    
+                                                                  
+</project>  	                                                                             
