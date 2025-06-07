@@ -1,0 +1,88 @@
+		<div id="regid" data-ng-controller="RegistrationController">
+			<div class="modal-dialog modal-lg">
+					<div class="modal-content" style="background-color:ghostwhite;background-image: url('img/core-img/back.jpg');background-size:cover" >
+						<div class="modal-header" style="margin-bottom:0px">
+					
+						<img src="img/core-img/sample1.jpg " height="100%" width="50%" align="middle">
+							
+							<div class="col-12 col-lg-5">
+          <div class="contact-content mb-100">
+        
+           
+            <div class="section-heading">
+           
+              <h2><span>Update</span><font color="white"> Profile </font></h2>
+              <img src="img/core-img/decor2.png" alt="">
+            </div>
+       
+            <div class="contact-form-area">
+              <form action="#" method="post" name="myform2">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <input type="text" class="form-control" name="firstname" placeholder="First Name" data-ng-model="data.object.fname" >
+                  </div>
+                   <div class="col-lg-12">
+                    <input type="text" class="form-control" name="lastname" placeholder="Last  Name" data-ng-model="data.object.lname">
+                  </div>
+				  <div class="col-lg-12">
+                    <input type="email" class="form-control" id="mail" placeholder="Your Email" data-ng-model="data.object.mail" required="required"
+						pattern="^[A-Za-z0-9.$]*[@][a-z]{3,8}.(com|gov|org|office|co.in|edu|in)"
+						class="form-control"/>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <input type="text" class="form-control" name="username" placeholder="User  Name" data-ng-model="data.object.username">
+                  </div>
+                  <div class="col-lg-12" id="psd">
+                    <input type="password" id="pwd" class="form-control" name="password" placeholder="password" data-ng-model="data.object.password">
+                  </div>
+
+                  
+               
+              <div class="radio  col-lg-4"><font color="white">Type:</font>
+										
+											<select class="selectpicker"
+												data-ng-model="data.object.type">
+												<option>Farmer</option>
+												<option>Buyer</option>
+											</select>
+										</div>
+										
+										
+                  <div class="col-12 mt-30">
+                    <button type="button" class="btn famie-btn" id="update" 
+								data-ng-click="updateData(data.object);"  data-dismiss="modal">Update</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+		</div>
+	</div>
+	</div>
+	</div>
+	 <script>
+		jQuery(document).ready(function() {
+			$("#update").show();
+			$("#psd").hide();
+			angular.bootstrap(jQuery("#regid"), [ 'RegistrationModule' ]); 
+		});
+		 jQuery("#register").click(function(){
+			$("#update").show();
+			$("#psd").show();
+			 angular.bootstrap(jQuery("#regid"), [ 'RegistrationModule' ]); 
+		}); 
+		jQuery(document).on('click',"#editData",function(){
+			$("#update").show();
+			$("#psd").hide();
+		angular.bootstrap(jQuery("#regid"), [ 'RegistrationModule' ]);
+		}); 
+	
+		
+		
+		                        
+		
+		                         
+
+        </script>

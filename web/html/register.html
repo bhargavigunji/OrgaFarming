@@ -1,0 +1,116 @@
+		<div id="regid" data-ng-controller="RegistrationController">
+			<div class="modal-dialog modal-lg">
+					<div class="modal-content" style="background-color:ghostwhite;background-image: url('img/core-img/back.jpg');background-size:cover" >
+						<div class="modal-header" style="margin-bottom:0px">
+					
+						<img src="img/core-img/sample.jpg " height="100%" width="50%" align="middle">
+							
+							<div class="col-12 col-lg-5">
+          <div class="contact-content mb-100">
+        
+           
+            <div class="section-heading">             
+           
+              <h2><span>Registration</span></h2>
+              <img src="img/core-img/decor2.png" alt="">          
+            </div>
+       
+            <div class="contact-form-area">
+              <form action="#" method="post" name="myform2">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <input type="text" class="form-control" name="firstname" placeholder="First Name" data-ng-model="data.object.fname" >
+                  </div>
+                   <div class="col-lg-12">
+                    <input type="text" class="form-control" name="lastname" placeholder="Last  Name" data-ng-model="data.object.lname">
+                  </div>
+				  <div class="col-lg-12">
+                    <input type="email" class="form-control" id="mail" placeholder="Your Email" data-ng-model="data.object.mail" required="required"
+						pattern="^[A-Za-z0-9.$]*[@][a-z]{3,8}.(com|gov|org|office|co.in|edu|in)"
+						class="form-control" / >
+                  </div>
+                  <div class="col-lg-12">
+								 <input
+									id="aadhaarNo" class="number form-control" maxlength=12
+									placeholder="Enter Aadhaar number"
+									data-ng-model="data.object.aadhaar" required="required"
+									data-ng-blur="validateAadhaar1(data.object.aadhaar,'aadhaarNo');">
+							</div>
+                  <div class="col-lg-12">
+                    <input type="text" class="form-control" name="username" placeholder="User  Name" data-ng-model="data.object.username">
+                  </div>
+				  <div class="col-lg-12">
+                    <input type="password" id="pwd" class="form-control" name="password" placeholder="password" data-ng-model="data.object.password">
+                  </div>
+                   <div class="col-lg-12">
+                    <input type="password" id="pwd1" class="form-control" name="confirmpassword" placeholder="confirm password" data-ng-model="data.object.confirmpassword"><font color="white"><span id="message">Don't leave password Empty</span></font>
+                   <br><input type="checkbox" onclick="visible()"><font color="white">Show Password</font>
+                  </div>
+                  
+               
+              <div class="radio  col-md-4"><font color="white">Type:</font>
+										
+											<select class="selectpicker"
+												data-ng-model="data.object.type">
+												<option>Farmer</option>
+												<option>Buyer</option>
+											</select>
+										</div>
+										
+                  <div >
+                    <button type="button" class="btn famie-btn mt-30" id="add" data-ng-click="registration(data.object);"  data-dismiss="modal">Register</button>
+                    <button type="button" id="cancel" class="btn famie-btn mt-30" onclick="Andromeda.showLogin();">Back</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+		</div>
+	</div>
+	</div>
+	</div>
+	 <script>
+		jQuery(document).ready(function() {
+			$("#update").hide();
+			$("#add").show();
+			angular.bootstrap(jQuery("#regid"), [ 'RegistrationModule' ]); 
+		});
+		 jQuery("#register").click(function(){
+			$("#update").hide();
+			$("#add").show();
+			/* angular.bootstrap(jQuery("#regid"), [ 'RegistrationModule' ]); */
+		});
+		jQuery(document).on('click',"#editData",function(){
+			$("#update").show();
+			$("#add").hide();
+			/* angular.bootstrap(jQuery("#regid"), [ 'RegistrationModule' ]); */
+		}); 
+		$('#pwd, #pwd1').on('keyup', function () {
+			  if ($('#pwd').val() == $('#pwd1').val()) {
+			    $('#message').html('Matching').css('color', 'yellow');
+			  } else 
+			    $('#message').html('Not Matching').css('color', 'red');
+			});
+		function visible()
+		{
+			var x=document.getElementById("pwd");
+			var y=document.getElementById("pwd1");
+			if(x.type === "password"||y.type === "password")
+				{
+				x.type = "text";
+				y.type = "text";
+				}
+			else
+				{
+				x.type = "password";
+				y.type = "password";
+				}
+		}
+		
+		
+		
+		
+		
+
+        </script>

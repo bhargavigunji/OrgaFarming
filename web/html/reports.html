@@ -1,0 +1,43 @@
+<div id="msgid" data-ng-controller="mainController">
+		<div class="container"><br><br>
+		<div id="viewdiv">
+			
+			<table class="table table-bordered">
+				<tr style='background-color: ghostwhite'>
+					<th> Name</th>
+					<th>Email</th>
+					<th>Message</th>
+				</tr>
+				<tr data-ng-repeat="userdata in RegisterDetails">
+					<td>{{userdata.name}}</td>
+					<td>{{userdata.email}}</td>
+					<td>{{userdata.message}}</td>
+
+					
+				</tr>
+				</table>
+			
+</div>
+</div>
+<script>                       
+		jQuery(document).ready(function() {
+			$("#update").hide();
+			$("#add").hide();
+			angular.bootstrap(jQuery("#msgid"), [ 'valid' ]);
+		});
+	
+	</script>
+<script src="/orga/js/popper.min.js"></script>
+  <script src="/orga/js/bootstrap.min.js"></script>
+  <script src="/orga/js/owl.carousel.min.js"></script>
+  <script src="/orga/js/classynav.js"></script>
+  <script src="/orga/js/wow.min.js"></script>
+  <script src="/orga/js/jquery.sticky.js"></script>
+  <script src="/orga/js/jquery.magnific-popup.min.js"></script>
+  <script src="/orga/js/jquery.scrollup.min.js"></script>
+  <script src="/orga/js/jarallax.min.js"></script>
+  <script src="/orga/js/jarallax-video.min.js"></script>
+  <script src="/orga/js/active.js"></script>
+  <script src="/orga/js/valid.js"></script>
+  <script src="/orga/js/RegistrationModule.js"></script>
+  </div>

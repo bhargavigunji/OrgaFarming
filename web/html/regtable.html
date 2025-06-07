@@ -1,0 +1,47 @@
+<div id="regid" data-ng-controller="RegistrationController1">
+		<div class="container"><br><br>
+		<div id="viewdiv">
+			
+			<table class="table table-bordered">
+				<tr style='background-color: ghostwhite'>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email ID</th>
+					<th>UserName</th>
+					<th>Type</th>
+					
+				</tr>
+				<tr data-ng-repeat="userdata in userdetails">
+					<td>{{userdata.fname}}</td>
+					<td>{{userdata.lname}}</td>
+					<td>{{userdata.mail}}</td>
+					<td>{{userdata.username}}</td>
+					<td>{{userdata.type}}</td>
+					
+				</tr>
+				</table>                          
+			
+</div>
+</div>
+<script>                       
+		jQuery(document).ready(function() {
+			$("#update").hide();
+			$("#add").hide();
+			angular.bootstrap(jQuery("#regid"), [ 'RegistrationModule1' ]);
+		});
+	
+	</script>
+<script src="/orga/js/popper.min.js"></script>
+  <script src="/orga/js/bootstrap.min.js"></script>
+  <script src="/orga/js/owl.carousel.min.js"></script>
+  <script src="/orga/js/classynav.js"></script>
+  <script src="/orga/js/wow.min.js"></script>
+  <script src="/orga/js/jquery.sticky.js"></script>
+  <script src="/orga/js/jquery.magnific-popup.min.js"></script>
+  <script src="/orga/js/jquery.scrollup.min.js"></script>
+  <script src="/orga/js/jarallax.min.js"></script>
+  <script src="/orga/js/jarallax-video.min.js"></script>
+  <script src="/orga/js/active.js"></script>
+  <script src="/orga/js/valid.js"></script>
+  <script src="/orga/js/RegistrationModule1.js"></script>
+  </div>

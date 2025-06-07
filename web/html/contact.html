@@ -1,0 +1,163 @@
+<div id="contact">
+
+  <!-- ##### Breadcrumb Area Start ##### -->
+  <div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url('img/core-img/cont.jpg');">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <div class="breadcrumb-text">
+            <h2>CONTACT US</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="famie-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Contact</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- ##### Breadcrumb Area End ##### -->
+
+  <!-- ##### Contact Information Area Start ##### -->
+  <section class="contact-info-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <!-- Section Heading -->
+          <div class="section-heading text-center">
+            <p>CONTACT INFO</p>
+            <h2><span>The Best Way</span> To Contact Us For The Help</h2>
+            <img src="img/core-img/decor2.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <!-- Single Information Area -->
+        <div class="col-12 col-md-4">
+          <div class="single-information-area text-center mb-100 wow fadeInUp" data-wow-delay="100ms">
+            <div class="contact-icon">
+              <i class="icon_pin_alt"></i>
+            </div>
+            <h5>Address</h5>
+            <h6>Gudlavalleru-Addada Rd, Gudlavalleru, Andhra Pradesh, 521356</h6>
+          </div>
+        </div>
+
+        <!-- Single Information Area -->
+        <div class="col-12 col-md-4">
+          <div class="single-information-area text-center mb-100 wow fadeInUp" data-wow-delay="500ms">
+            <div class="contact-icon">
+              <i class="icon_phone"></i>
+            </div>
+            <h5>Phone</h5>
+            <h6>08674-273366</h6>
+          </div>
+        </div>
+
+        <!-- Single Information Area -->
+        <div class="col-12 col-md-4">
+          <div class="single-information-area text-center mb-100 wow fadeInUp" data-wow-delay="1000ms">
+            <div class="contact-icon">
+              <i class="icon_mail_alt"></i>
+            </div>
+            <h5>Email</h5>
+            <h6>orgafarming.pro@gmail.com</h6>
+          </div>
+        </div>
+
+      </div>
+      <div class="c-border"></div>
+    </div>
+  </section>
+  <!-- ##### Contact Information Area End ##### -->
+
+  <!-- ##### Contact Area Start ##### -->
+  <section class="contact-area section-padding-100-0">
+    <div class="container" id="msgid" data-ng-controller="mainController">
+      <div class="row justify-content-between">
+
+        <!-- Contact Content -->
+        <div class="col-12 col-lg-5">
+          <div class="contact-content mb-100">
+            <!-- Section Heading -->
+            <div class="section-heading">
+              <p>Contact now</p>
+              <h2><span>Get In Touch</span> With Us</h2>
+              <img src="img/core-img/decor.png" alt="">
+            </div>
+            <!-- Contact Form Area -->
+            <div class="contact-form-area">
+              <form action="#" method="post">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" data-ng-model="data.object.name" >
+                  </div>
+                  <div class="col-lg-6">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" data-ng-model="data.object.email" required="required"
+						pattern="^[A-Za-z0-9.$]*[@][a-z]{3,8}.(com|gov|org|office|co.in|edu|in)"
+						class="form-control">
+                  </div>
+                  
+                  <div class="col-12">
+                    <textarea name="message" class="form-control" cols="30" rows="10" placeholder="Your Message" data-ng-model="data.object.message" ></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="button" class="btn famie-btn" id="add1" 
+								data-ng-click="msg(data.object);"  data-dismiss="modal">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Maps -->
+        <div class="col-lg-6">
+          <div class="contact-maps mb-100">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3828.4500640011265!2d81.04192611434006!3d16.351020136168707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a361d8f3e77a1a7%3A0xe2aa990af93b5807!2sA.+A.+N.+M.+%26+V.+V.+R.+S.+R.+Polytechnic!5e0!3m2!1sen!2sin!4v1561431083469!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ##### Contact Area End ##### -->
+ <script>
+		jQuery(document).ready(function() {
+			$("#update").hide();
+			$("#add").show();
+			angular.bootstrap(jQuery("#msgid"), [ 'valid' ]); 
+		});
+		 jQuery("#register").click(function(){
+			$("#update").hide();
+			$("#add").show();
+			/* angular.bootstrap(jQuery("#regid"), [ 'RegistrationModule' ]); */
+		});
+		jQuery(document).on('click',"#editData",function(){
+			$("#update").show();
+			$("#add").hide();
+			/* angular.bootstrap(jQuery("#regid"), [ 'RegistrationModule' ]); */
+		}); 
+		</script>
+
+  <script src="/orga/js/popper.min.js"></script>
+  <script src="/orga/js/bootstrap.min.js"></script>
+  <script src="/orga/js/owl.carousel.min.js"></script>
+  <script src="/orga/js/classynav.js"></script>
+  <script src="/orga/js/wow.min.js"></script>
+  <script src="/orga/js/jquery.sticky.js"></script>
+  <script src="/orga/js/jquery.magnific-popup.min.js"></script>
+  <script src="/orga/js/jquery.scrollup.min.js"></script>
+  <script src="/orga/js/jarallax.min.js"></script>
+  <script src="/orga/js/jarallax-video.min.js"></script>
+  <script src="/orga/js/active.js"></script>
+  <script src="/orga/js/valid.js"></script>
+  <script src="/orga/js/RegistrationModule.js"></script>
+  </div>
