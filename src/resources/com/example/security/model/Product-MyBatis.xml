@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="product">
+
+	<insert id="Insert" parameterType="map">
+		insert into	orga.products(name,email,product,price)
+		values(#{p.name},#{p.email},#{p.product},#{p.price});
+	</insert>
+	<select id="getAll" resultType="ProductModel">
+		SELECT name,email,product,price from orga.products;
+	  </select> 
+
+	
+</mapper>	                      

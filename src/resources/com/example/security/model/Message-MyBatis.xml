@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="message">
+
+	<insert id="Insert" parameterType="map">
+		insert into	orga.message(name,email,message)
+		values(#{p.name},#{p.email},#{p.message});
+	</insert>
+	 
+		 <select id="getAll" resultType="RegisterFormModel">
+		SELECT name,email,message from orga.message;
+	  </select> 
+	 
+</mapper>	

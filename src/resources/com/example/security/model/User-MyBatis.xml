@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="User">
+
+	<insert id="Insert" parameterType="map">
+		insert into	orga.register(fname,lname,mail,username,password,type,aadhaar)
+		values(#{p.fname},#{p.lname},#{p.mail},#{p.username},#{p.password},#{p.type},#{p.aadhaar});
+	</insert>
+	
+
+	  <select id="getAll" resultType="UserModel">
+		SELECT fname,lname,mail,username,password,type from orga.register;
+	  </select> 
+	     
+	   <select id="getById" resultType="UserModel"> 
+		SELECT fname,lname,mail,username,password,type from orga.register WHERE username = #{username};
+	
+	  </select>  
+	      
+	 <!--   <select id="forgot" resultType="UserModel"> 
+		SELECT password from orga.register WHERE username = #{username};
+	
+	  </select> -->     
+      
+
+	<delete id="deleteData" parameterType="java.lang.String">
+		delete from orga.register where fname = #{name};    
+	</delete>
+	
+	<update id="updateData"  parameterType="map">
+		update orga.register SET lname=#{p.lname},mail=#{p.mail},fname=#{p.fname},
+		password=#{p.password},type=#{p.type} WHERE username=#{p.username};
+	</update>
+	
+</mapper>	
